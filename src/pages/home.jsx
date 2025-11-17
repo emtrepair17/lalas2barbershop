@@ -15,27 +15,33 @@ export function Home() {
   const servicesImgs = [
     {
       src: "/img/galaryimg1.jpg",
-      title: "Where every cut is a masterpiece and every style tells your story."
+      title: "Where every cut is a masterpiece and every style tells your story.",
+      subtitle:"Skilled and Experienced Barbers"
     },
     {
       src: "/img/galaryimg3.jpg",
-      title: "From classic styles to bold colors—your hair, your way."
+      title: "From classic styles to bold colors—your hair, your way.",
+      subtitle:"Personalized Service"
     },
     {
       src: "/img/galaryimg6.jpg",
-      title: "Transform your look with our expert cuts and vibrant hair colors."
+      title: "Transform your look with our expert cuts and vibrant hair colors.",
+      subtitle:"Comprehensive Services"
     },
     {
       src: "/img/galaryimg5.jpg",
-      title: "Unleash your inner confidence with the perfect haircut tailored just for you."
+      title: "Unleash your inner confidence with the perfect haircut tailored just for you.",
+      subtitle:"Family-Friendly Environment"
     },
     {
       src: "/img/galaryimg7.jpg",
-      title: "Get the latest trends, timeless styles, and colors that pop, all in one place."
+      title: "Get the latest trends, timeless styles, and colors that pop, all in one place.",
+      subtitle:"Precision & Attention to Detail"
     },
     {
       src: "/img/galaryimg4.jpg",
-      title: "Step into a world of stunning hairstyles and colors that match your personality"
+      title: "Step into a world of stunning hairstyles and colors that match your personality",
+      subtitle:"Faith-Driven Values"
     }
   ]
 
@@ -43,6 +49,7 @@ export function Home() {
 
   const theme = useTheme();
   const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -54,54 +61,93 @@ export function Home() {
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [images.length]);
 
+    useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % servicesImgs.length);
+    }, 3000); // 3000ms = 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   
 
   return (
     <>
-      <div className="relative flex h-[80vh] content-center items-center justify-center overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
-        {isMobileView ? (
-          <div className="absolute top-0 left-0 w-full h-full">
-            {images.map((img, index) => (
-              <img 
-                key={img}
-                src={img} 
-                alt="Salon Services"
-                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                }`}
-                style={{
-                  objectPosition: 'center center',
-                  minHeight: '100%',
-                  minWidth: '100%'
-                }}
-                onLoad={() => setIsLoading(false)}
-              />
-            ))}
-            {isLoading && (
-              <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse"></div>
-            )}
+    <div className="relative flex h-[80vh] items-center justify-center overflow-hidden">
+      {/* Dark overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
 
-          </div>
-        ) : (
-          /* Desktop View - Video */
+      {isMobileView ? (
+        <div className="absolute top-0 left-0 w-full h-full">
+          {servicesImgs.map((img, index) => (
+            <div
+              key={img.src}
+              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <img
+                src={img.src}
+                alt={img.subtitle}
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center center" }}
+              />
+              {/* Title overlay */}
+              <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
+                <h2
+                  className={`text-2xl md:text-4xl font-extrabold drop-shadow-2xl transition-all duration-1000 
+                    ${index === currentIndex ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"} 
+                    ${["text-yellow-300","text-pink-300","text-green-300","text-cyan-300","text-orange-300","text-purple-300"][index % 6]}`}
+                >
+                  {img.subtitle}
+                </h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="absolute top-0 left-0 w-full h-full">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-125"
-            style={{
-              objectPosition: 'center center',
-              minHeight: '100%',
-              minWidth: '100%'
-            }}
+            className="absolute top-0 left-0 w-full h-full object-cover brightness-125"
+            style={{ objectPosition: "center center" }}
           >
             <source src="/img/lalassalonvideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        )}
-      </div>
+
+          {/* Image slider on top of video */}
+          {servicesImgs.map((img, index) => (
+            <div
+              key={img.src}
+              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <img
+                src={img.src}
+                alt={img.subtitle}
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center center" }}
+              />
+              <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
+                <h2
+                  className={`text-2xl md:text-4xl font-extrabold drop-shadow-2xl transition-all duration-1000 
+                    ${index === currentIndex ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"} 
+                    ${["text-yellow-300","text-pink-300","text-green-300","text-cyan-300","text-orange-300","text-purple-300"][index % 6]}`}
+                >
+                  {img.subtitle}
+                </h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+
 
       <div>
         <Typography style={{ fontSize: "66px", color: "#000000", textAlign: "center", fontFamily: "bodoni-moda,bodoni moda,serif", marginTop: "40px" }}>
