@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+                          import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Footer, Navbar } from "@/widgets/layout";
 import routes from "@/routes";
 
@@ -13,7 +13,7 @@ function App() {
       </div>
 
       {/* Main content with proper padding to account for fixed navbar */}
-      <div className="pt-[75px] min-h-screen" style={{fontFamily: "Arial,Helvetica,sans-serif"}}> {/* Adjusted padding */}
+      <div className="pt-[25px] min-h-screen" style={{fontFamily: "Arial,Helvetica,sans-serif"}}> {/* Adjusted padding */}
         <Routes>
           {routes.map(
             ({ path, element }, key) =>

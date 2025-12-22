@@ -40,8 +40,8 @@ const Contact = (props) => {
             );
     };
     return (
-        <div className="relative flex h-[150vh] content-center items-center justify-center overflow-hidden" style={{ background: "linear-gradient(to right, rgb(202, 207, 251) 0%, rgb(108, 169, 236) 100%)" }}>
-            <div className="container" style={{ marginTop: "40px", paddingLeft:`${isMobileView&&"20px"}`,paddingRight:`${isMobileView&&"20px"}` }}>
+        <div className="relative flex content-center items-center justify-center overflow-hidden" style={{ background: "linear-gradient(to right, rgb(202, 207, 251) 0%, rgb(108, 169, 236) 100%)" }}>
+            <div className="container" style={{ marginTop: "60px", paddingLeft:`${isMobileView&&"20px"}`,paddingRight:`${isMobileView&&"20px"}` }}>
 
                 <Grid container spacing={3}>
                     <Grid item md={8} sm={6} xs={12}>

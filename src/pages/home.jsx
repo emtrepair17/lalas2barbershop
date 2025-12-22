@@ -74,7 +74,7 @@ export function Home() {
     <>
     <div className="relative flex h-[80vh] items-center justify-center overflow-hidden">
       {/* Dark overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30 z-10"></div>
 
       {isMobileView ? (
         <div className="absolute top-0 left-0 w-full h-full">
@@ -93,11 +93,11 @@ export function Home() {
               />
               {/* Title overlay */}
               <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
-                <h2
-                  className={`text-2xl md:text-4xl font-extrabold drop-shadow-2xl transition-all duration-1000 
-                    ${index === currentIndex ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"} 
-                    ${["text-yellow-300","text-pink-300","text-green-300","text-cyan-300","text-orange-300","text-purple-300"][index % 6]}`}
-                >
+              <h2
+                className={`text-2xl md:text-4xl font-extrabold text-white
+                  drop-shadow-2xl transition-all duration-1000
+                  ${index === currentIndex ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              >
                   {img.subtitle}
                 </h2>
               </div>
@@ -133,11 +133,11 @@ export function Home() {
                 style={{ objectPosition: "center center" }}
               />
               <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
-                <h2
-                  className={`text-2xl md:text-4xl font-extrabold drop-shadow-2xl transition-all duration-1000 
-                    ${index === currentIndex ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"} 
-                    ${["text-yellow-300","text-pink-300","text-green-300","text-cyan-300","text-orange-300","text-purple-300"][index % 6]}`}
-                >
+              <h2
+                className={`text-2xl md:text-4xl font-extrabold text-white
+                  drop-shadow-2xl transition-all duration-1000
+                  ${index === currentIndex ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              >
                   {img.subtitle}
                 </h2>
               </div>

@@ -26,8 +26,8 @@ export function About() {
 
   return (
     <>
-      <div className="relative flex h-[110vh] content-center items-center justify-center overflow-hidden">
-        <Grid container spacing={3} style={{ padding: "40px", fontFamily: "bodoni-moda,bodoni moda,serif",paddingTop:`${isMobileView&&"250px"}` }}>
+      <div className="relative flex content-center items-center justify-center overflow-hidden">
+        <Grid container spacing={3} style={{ padding: "70px 40px 0px 40px", fontFamily: "bodoni-moda,bodoni moda,serif",paddingTop:`${isMobileView&&"70px"}` }}>
           <Grid md={6} xs={12}><img src="/img/galaryimg4.jpg" className="img-responsive" alt="" />{" "}</Grid>
           <Grid md={6} xs={12}>
             <div style={{ padding: "40px" }}>

@@ -82,7 +82,7 @@ export function Navbar({ brandName, routes }) {
         {/* Logo on the Left */}
         <Link to="/">
           <Typography>
-            <img src="/img/lalaslogo.png" width="80px" height="auto" alt="Everest Logo" />
+            <img src="/img/lalaslogo.png" width="40px" height="auto" alt="Everest Logo" />
           </Typography>
         </Link>
 
