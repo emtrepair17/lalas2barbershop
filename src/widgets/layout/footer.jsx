@@ -22,7 +22,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
 
         {/* Social Media Links - Added this section */}
         <div className="flex justify-center gap-6 mt-6">
-          <a href="https://www.tiktok.com/@Lalas.2" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@lalas.2?_r=1&_t=ZS-92sU0rwPzeh" target="_blank" rel="noopener noreferrer">
             <FaTiktok className="w-6 h-6 text-gray-700 hover:text-pink-500 transition-colors" />
           </a>
           <a href="https://www.facebook.com/share/1Gs5kmxb4L/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">

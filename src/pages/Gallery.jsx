@@ -41,25 +41,36 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="relative flex justify-center overflow-hidden">
+<div className="relative flex justify-center overflow-hidden">
+  <Grid
+    container
+    spacing={3}
+    sx={{
+      padding: isMobileView ? "70px 20px" : "70px 40px",
+      fontFamily: "bodoni-moda, bodoni moda, serif",
+    }}
+  >
+    {galaryImages.map((el, index) => (
       <Grid
-        container
-        spacing={3}
-        sx={{
-          padding: isMobileView ? "70px 20px" : "70px 40px",
-          fontFamily: "bodoni-moda, bodoni moda, serif",
-        }}
+        item
+        xs={12}
+        md={3}
+        key={index}
+        display="flex"
+        justifyContent="center"
       >
-        {galaryImages.map((el, index) => (
-          <Grid item xs={12} md={3} key={index}>
-            <img
-              src={el}
-              alt="gallery"
-              style={{ width: "80%", borderRadius: "10px" }}
-            />
-          </Grid>
-        ))}
+        <img
+          src={el}
+          alt="gallery"
+          style={{
+            width: "80%",
+            borderRadius: "10px",
+          }}
+        />
       </Grid>
-    </div>
+    ))}
+  </Grid>
+</div>
+
   );
 }
