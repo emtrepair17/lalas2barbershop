@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 
 
 export const routes = [
@@ -22,16 +23,16 @@ export const routes = [
     path: "/service",
     element: <Services/>,
   },
+    {
+    name: "Gallery",
+    path: "/gallery",
+    element: <Gallery />,
+  },
   {
     name: "Contact",
     path: "/contact",
     element: <Contact/>,
   },
-  // {
-  //   name: "Contact Us",
-  //   path: "/contact-us",
-  //   element: <Microsoldering />,
-  // },
   // {
   //   name: "Order",
   //   path: "/order",

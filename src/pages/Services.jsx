@@ -18,7 +18,7 @@ const serviceData = [
     },
     {
         title: "Beard Services",
-        img: "/img/haircut.png",
+        img: "/img/beardstyle.jpeg",
         tags: [
             "Beard Trim",
             "Beard Maintenance",

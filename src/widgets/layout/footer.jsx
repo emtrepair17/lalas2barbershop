@@ -14,7 +14,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
             <img src="/img/lalaslogo.png" width="160px" height="auto" alt="Everest Logo" />
           </div>
           <div style={{fontFamily: "futura-lt-w01-book,futura-lt-w05-book,sans-serif", textAlign:"center"}}>
-            <Typography>1923 Baltimore-Reynoldsburg Rd, Reynoldsburg, OH 43068, United States</Typography>
+            <Typography>1913 Baltimore-Reynoldsburg Rd, Reynoldsburg, OH 43068, United States</Typography>
             <Typography>+1 (740) 918-9526</Typography>
             <Typography>lalas2barbershop@gmail.com</Typography>
           </div>
@@ -22,13 +22,13 @@ export function Footer({ title, description, socials, menus, copyright }) {
 
         {/* Social Media Links - Added this section */}
         <div className="flex justify-center gap-6 mt-6">
-          <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@Lalas.2" target="_blank" rel="noopener noreferrer">
             <FaTiktok className="w-6 h-6 text-gray-700 hover:text-pink-500 transition-colors" />
           </a>
-          <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/1Gs5kmxb4L/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="w-6 h-6 text-gray-700 hover:text-blue-600 transition-colors" />
           </a>
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/lalas2quasi?igsh=MTE3YWUzOGVpYmhzag==" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="w-6 h-6 text-gray-700 hover:text-purple-500 transition-colors" />
           </a>
         </div>

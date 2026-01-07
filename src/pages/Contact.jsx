@@ -4,6 +4,7 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 import { TextField, Grid, Button, useTheme, useMediaQuery } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import EmailTemp from "@/components/email/EmailTemp";
 
 const initialState = {
     name: "",
@@ -52,7 +53,11 @@ const Contact = (props) => {
                                 get back to you as soon as possible.
                             </p>
                         </div>
-                        <form name="sentMessage" validate onSubmit={handleSubmit} style={{ background: "#fff", padding: "20px", marginTop:`${isMobileView&&"60px"}` }}>
+
+
+
+
+                        {/* <form name="sentMessage" validate onSubmit={handleSubmit} style={{ background: "#fff", padding: "20px", marginTop:`${isMobileView&&"60px"}` }}>
 
                             <Grid container spacing={4} direction="column">
                                 <Grid item>
@@ -84,7 +89,12 @@ const Contact = (props) => {
                                 </Grid>
                             </Grid>
 
-                        </form>
+                        </form> */}
+
+
+                        <EmailTemp/>
+
+
                     </Grid>
                     <Grid item md={4} sm={6} xs={12} style={{ marginTop: "70px", color:"#fff" }}>
                     <Grid container spacing={4} direction="column">
