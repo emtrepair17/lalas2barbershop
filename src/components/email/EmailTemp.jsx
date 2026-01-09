@@ -10,8 +10,8 @@ export const EmailTemp = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_kdpfg9q", "template_i40778q", form.current, {
-        publicKey: "EZvKR7t9vzJR3MvcX",
+      .sendForm("service_z5uguoj", "template_cpl4izi", form.current, {
+        publicKey: "AyrqDRWina0UGC_QP",
       })
       .then(
         () => {
@@ -29,7 +29,7 @@ export const EmailTemp = () => {
       Contact Us
     </Typography>
     {success && <Alert severity={success.includes("Failed") ? "error" : "success"}>{success}</Alert>}
-    <TextField fullWidth label="Name" name="from_name" margin="normal" required />
+    <TextField fullWidth label="Name" name="user_name" margin="normal" required />
     <TextField fullWidth label="Email" name="user_email" type="email" margin="normal" required />
     <TextField fullWidth label="Message" name="message" multiline rows={4} margin="normal" required />
     <Button type="submit" variant="contained"  fullWidth sx={{ mt: 2, backgroundColor:"#000000" }}>
